@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartNutrition">
+        <activity android:name=".HealthTrackerActivity"></activity>
+        <activity android:name=".CalorieCounterActivity" />
+        <activity android:name=".NutritionInfoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
