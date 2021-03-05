@@ -1,3 +1,8 @@
+/** 
+*   Contains the information gathered from the NutritionInfoActivity, CalorieCounterActivity, and HealthTrackerActivity classes 
+*
+*
+*/
 package edu.uc.mille5bm.smartnutrition
 
 import android.content.Intent
