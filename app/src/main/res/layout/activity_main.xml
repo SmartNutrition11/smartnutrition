@@ -51,7 +51,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/button1"
+        android:id="@+id/btnNutritionInfo"
         android:layout_width="300dp"
         android:textSize="20dp"
         android:layout_gravity="center"
@@ -83,7 +83,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/button2"
+        android:id="@+id/btnCalorieCounter"
         android:layout_width="300dp"
         android:textSize="20dp"
         android:layout_gravity="center"
@@ -115,7 +115,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/button3"
+        android:id="@+id/btnHealthTracker"
         android:layout_width="300dp"
         android:textSize="20dp"
         android:layout_gravity="center"
