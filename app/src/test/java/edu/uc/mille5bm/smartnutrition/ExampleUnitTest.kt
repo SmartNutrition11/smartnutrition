@@ -16,7 +16,7 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
-
+    //lack of unit tests in TDD
     @Test
     fun requiredDTOExist(){
         var exercise = Exercise()
