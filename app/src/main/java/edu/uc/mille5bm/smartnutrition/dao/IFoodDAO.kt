@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface IFoodDAO {
 
-    @GET("https://github.com/terrenjpeterson/caloriecounter/blob/master/src/data/foods.json")
+    @GET("https://github.com/noizwaves/nutrition/blob/master/data/food.json")
     fun getAllFoods(): Call<ArrayList<Food>>
 }
