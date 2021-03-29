@@ -15,7 +15,7 @@ class MainFragment {
 
     private lateinit var viewModel: MainViewModel
 
-    override fun onCreateView(
+    /***override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
@@ -26,5 +26,5 @@ class MainFragment {
         super.onActivityCreated(savedInstaceState)
         viewModel = viewModelProvider.of(this).get(MainViewModel::class)
 
-    }
+    }***/
 }
