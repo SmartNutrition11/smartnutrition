@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".NutritionInfoActivity">
 
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/themeColor"
+        android:background="@color/black"
         android:gravity="center"
         android:text="Nutrition Info"
         android:textColor="@color/white"
@@ -28,93 +28,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="12dp"
-            app:cardCornerRadius="40dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@color/themeColor"
-                android:padding="15dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/meat" />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="12dp"
-            app:cardCornerRadius="40dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@color/themeColor"
-                android:padding="15dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/fire" />
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="12dp"
-            app:cardCornerRadius="40dp">
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@color/themeColor"
-                android:padding="15dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/carrot" />
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:elevation="12dp"
-            app:cardCornerRadius="40dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@color/themeColor"
-                android:padding="15dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/sugar" />
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-
 
 </LinearLayout>
