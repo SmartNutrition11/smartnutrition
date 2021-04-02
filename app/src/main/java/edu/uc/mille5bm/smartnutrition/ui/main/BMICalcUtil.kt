@@ -17,8 +17,10 @@ class BMICalcUtil {
             BMI_CATEGORY_HEALTHY
         } else if (bmi >= 25 && bmi < 30) {
             BMI_CATEGORY_OVERWEIGHT
-        } else {
+        } else if (bmi >= 30 && bmi < 40){
             BMI_CATEGORY_OBESE
+        } else {
+            BMI_CATEGORY_EXTREMELY_OBESE
         }
     }
 
@@ -31,5 +33,6 @@ class BMICalcUtil {
         const val BMI_CATEGORY_HEALTHY = "Healthy Weight Range"
         const val BMI_CATEGORY_OVERWEIGHT = "Overweight"
         const val BMI_CATEGORY_OBESE = "Obese"
+        const val BMI_CATEGORY_EXTREMELY_OBESE = "Extremely Obese"
     }
 }

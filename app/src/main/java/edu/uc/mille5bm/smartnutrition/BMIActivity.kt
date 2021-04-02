@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.*
 import androidx.cardview.widget.CardView
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil
+import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY_EXTREMELY_OBESE
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY_HEALTHY
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY_OBESE
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY_OVERWEIGHT
@@ -47,8 +48,8 @@ class BMIActivity: AppCompatActivity(){
                 if (weightKgEditText.length() == 0 || heightCmEditText.length() == 0) {
                     Toast.makeText(this@BMIActivity, "Populate Weight and Height to Calculate BMI", Toast.LENGTH_SHORT).show()
                 } else {
-                    val heightInCms = heightCmEditText.getText().toString().toDouble()
-                    val weightInKgs = weightKgEditText.getText().toString().toDouble()
+                    val heightInCms = heightCmEditText.text.toString().toDouble()
+                    val weightInKgs = weightKgEditText.text.toString().toDouble()
                     val bmi = BMICalcUtil().calculateBMIMetric(heightInCms, weightInKgs)
                     displayBMI(bmi)
                 }
@@ -56,8 +57,8 @@ class BMIActivity: AppCompatActivity(){
                 if (weightLbsEditText.length() == 0 || heightFtEditText.length() == 0 || heightInEditText.length() == 0) {
                     Toast.makeText(this@BMIActivity, "Populate Weight and Height to Calculate BMI", Toast.LENGTH_SHORT).show()
                 } else {
-                    val heightFeet = heightFtEditText.getText().toString().toDouble()
-                    val heightInches = heightInEditText.getText().toString().toDouble()
+                    val heightFeet = heightFtEditText.text.toString().toDouble()
+                    val heightInches = heightInEditText.text.toString().toDouble()
                     val weightLbs = weightLbsEditText.getText().toString().toDouble()
                     val bmi = BMICalcUtil().calculateBMIImperial(heightFeet, heightInches, weightLbs)
                     displayBMI(bmi)
@@ -92,10 +93,11 @@ class BMIActivity: AppCompatActivity(){
         val bmiCategory =   BMICalcUtil().classifyBMI(bmi)
         categoryTextView.text = bmiCategory
         when (bmiCategory) {
-            BMI_CATEGORY_UNDERWEIGHT -> bmiResultCardView.setCardBackgroundColor(Color.YELLOW)
-            BMI_CATEGORY_HEALTHY -> bmiResultCardView.setCardBackgroundColor(Color.BLACK)
+            BMI_CATEGORY_UNDERWEIGHT -> bmiResultCardView.setCardBackgroundColor(Color.BLUE)
+            BMI_CATEGORY_HEALTHY -> bmiResultCardView.setCardBackgroundColor(Color.GREEN)
             BMI_CATEGORY_OVERWEIGHT -> bmiResultCardView.setCardBackgroundColor(Color.YELLOW)
-            BMI_CATEGORY_OBESE -> bmiResultCardView.setCardBackgroundColor(Color.RED)
+            BMI_CATEGORY_OBESE -> bmiResultCardView.setCardBackgroundColor(Color.rgb(255,165,0)) // Orange
+            BMI_CATEGORY_EXTREMELY_OBESE -> bmiResultCardView.setCardBackgroundColor(Color.RED)
         }
     }
 }
