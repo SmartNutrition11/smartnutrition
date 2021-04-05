@@ -9,7 +9,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class FoodService {
-    fun fetchFoods() : MutableLiveData<ArrayList<Food>> {
+    fun fetchFoods(foodName: String): MutableLiveData<ArrayList<Food>> {
         //local variable should start with lowercase letter
         var foods = MutableLiveData<ArrayList<Food>>()
         val service = RetrofitClientInstance.retrofitInstance?.create(IFoodDAO::class.java)
