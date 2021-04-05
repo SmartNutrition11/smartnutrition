@@ -10,7 +10,8 @@ import retrofit2.Response
 
 class FoodService {
     fun fetchFoods() : MutableLiveData<ArrayList<Food>> {
-        var _foods = MutableLiveData<ArrayList<Food>>()
+        //local variable should start with lowercase letter
+        var foods = MutableLiveData<ArrayList<Food>>()
         val service = RetrofitClientInstance.retrofitInstance?.create(IFoodDAO::class.java)
         val call = service?.getAllFoods()
         call?.enqueue(object : Callback<ArrayList<Food>> {
@@ -24,10 +25,10 @@ class FoodService {
                     call: Call<ArrayList<Food>>,
                     response: Response<ArrayList<Food>>
             ) {
-                _foods.value = response.body()
+                foods.value = response.body()
             }
 
         })
-        return _foods
+        return foods
     }
 }
