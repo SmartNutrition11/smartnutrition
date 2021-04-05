@@ -25,11 +25,12 @@ class CalorieCounterActivity: AppCompatActivity() {
     }
     fun submit(v: View?) {
         findViewById<View>(R.id.llAddActivity).visibility = View.GONE
-        var ed1 = findViewById<EditText>(R.id.etName)
-        val ed2 = findViewById<EditText>(R.id.etCal)
+        var edName = findViewById<EditText>(R.id.etName)
+        val edCalorie = findViewById<EditText>(R.id.etCal)
         //listItems.add(ed1.text.toString() + ",  Calories Burned: " + ed2.text)
       //  adapter!!.notifyDataSetChanged()
-        ed1.setText("")
-        ed2.setText("")
+        //ed1 and ed2 were unclear for variable names.
+        edName.setText("")
+        edCalorie.setText("")
     }
 }
