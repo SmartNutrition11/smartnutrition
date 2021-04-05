@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="BMI Calculator"
+        android:text="@string/bmi_calculator"
         android:textSize="32sp"/>
 
     <ToggleButton
@@ -18,8 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:textOff="Imperial Units"
-        android:textOn="Metric Units" />
+        android:textOff="@string/imperial_units"
+        android:textOn="@string/metric_units" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Height"
+                    android:text="@string/height"
                     android:textSize="24sp"/>
 
                 <EditText
@@ -56,7 +56,8 @@
                     android:inputType="numberDecimal"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_horizontal"
-                    android:hint="cm"/>
+                    android:hint="@string/cm"
+                    android:autofillHints="" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -71,7 +72,8 @@
                         android:ems="3"
                         android:inputType="numberDecimal"
                         android:gravity="center_horizontal"
-                        android:hint="ft"/>
+                        android:hint="@string/ft"
+                        android:autofillHints="" />
 
                     <EditText
                         android:id="@+id/activity_main_heightinches"
@@ -80,7 +82,8 @@
                         android:ems="3"
                         android:inputType="numberDecimal"
                         android:gravity="center_horizontal"
-                        android:hint="in"/>
+                        android:hint="@string/in"
+                        android:autofillHints="" />
 
                 </LinearLayout>
 
@@ -107,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Weight"
+                    android:text="@string/weight"
                     android:textSize="24sp"/>
 
                 <EditText
@@ -118,7 +121,8 @@
                     android:inputType="numberDecimal"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_horizontal"
-                    android:hint="kg"/>
+                    android:hint="@string/kg"
+                    android:autofillHints="" />
 
                 <EditText
                     android:id="@+id/activity_main_weightlbs"
@@ -128,7 +132,8 @@
                     android:inputType="numberDecimal"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_horizontal"
-                    android:hint="lbs"/>
+                    android:hint="@string/lbs"
+                    android:autofillHints="" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -139,7 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Calculate" />
+        android:text="@string/calculate" />
 
 
 
@@ -163,7 +168,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Your BMI"
+                android:text="@string/your_bmi"
                 android:textSize="30sp"/>
 
             <TextView
@@ -185,6 +190,36 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_nutritionpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/btnSpoon"
+            app:srcCompat="@drawable/spoon" />
+
+        <ImageButton
+            android:id="@+id/btn_caloriepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/btnFire"
+            app:srcCompat="@drawable/fire" />
+
+        <ImageButton
+            android:id="@+id/btn_healthpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/btnMore"
+            app:srcCompat="@drawable/add" />
+    </LinearLayout>
 
 
 </LinearLayout>
