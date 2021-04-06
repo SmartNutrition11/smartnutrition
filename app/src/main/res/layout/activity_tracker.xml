@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:elevation="2dp"
         android:clickable="true"
-        android:padding="20dp"
+        android:padding="@dimen/sm"
         android:visibility="gone">
 
         <TextView
@@ -27,7 +27,7 @@
             android:layout_marginBottom="50dp"
             android:gravity="center"
             android:text=" Add Activity"
-            android:textSize="30dp"
+            android:textSize="@dimen/md"
             android:textStyle="bold" />
 
         <EditText
@@ -54,7 +54,7 @@
             android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_margin="@dimen/md"
             android:onClick="submit"
             android:singleLine="true"
             android:text="Submit" />
@@ -73,7 +73,7 @@
             android:gravity="center"
             android:text="Activity Tracker"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="@dimen/sm"
             android:textStyle="bold" />
         <androidx.cardview.widget.CardView
             android:layout_width="60dp"
