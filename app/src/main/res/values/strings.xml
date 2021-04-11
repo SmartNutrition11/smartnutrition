@@ -5,34 +5,4 @@
     <string name="btn_nutrition_text">Nutrition Info</string>
     <string name="txt_menu_text">Menu</string>
     <string name="search_hint">Search&#8230;</string>
-    <string name="text_searchbox" />
-    <string name="image_fork" />
-    <string name="image_fire" />
-
-    <string name="image_more" />
-
-    <string name="nutrition_info">Nutrition Info</string>
-    <string name="bmi_calculator">BMI Calculator</string>
-    <string name="imperial_units">Imperial Units</string>
-    <string name="metric_units">Metric Units</string>
-    <string name="height">Height</string>
-    <string name="cm">cm</string>
-    <string name="ft">ft</string>
-    <string name="in">in</string>
-    <string name="weight">Weight</string>
-    <string name="kg">kg</string>
-    <string name="lbs">lbs</string>
-    <string name="calculate">Calculate</string>
-    <string name="your_bmi">Your BMI</string>
-    <string name="btnSpoon">SpoonPage</string>
-    <string name="btnMore">More</string>
-    <string name="btnFire">Fire</string>
-    <string name="add_activity">Add Activity</string>
-    <string name="textName">Name</string>
-    <string name="please_enter_activity_name">Please enter activity name</string>
-    <string name="please_enter_calories_burned">Please enter calories burned</string>
-    <string name="submit">Submit</string>
-    <string name="activity_tracker">Activity Tracker</string>
-
-    <string name="your_activities">Your Activities</string>
 </resources>

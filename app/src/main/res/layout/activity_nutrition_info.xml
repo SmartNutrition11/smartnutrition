@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".NutritionInfoActivity">
 
@@ -11,29 +11,23 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/lg"
         android:background="@color/black"
         android:gravity="center"
-        android:text="@string/nutrition_info"
+        android:text="Nutrition Info"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="@dimen/sm"
         android:textStyle="bold" />
 
     <SearchView
         android:id="@+id/nutritionSearch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" />
 
-    </SearchView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"></LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    </LinearLayout>
 
 </LinearLayout>

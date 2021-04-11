@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".CalorieCounterActivity">
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/llAddActivity"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:elevation="2dp"
         android:clickable="true"
-        android:padding="20dp"
+        android:padding="@dimen/sm"
         android:visibility="gone">
 
         <TextView
@@ -26,8 +26,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="50dp"
             android:gravity="center"
-            android:text="@string/add_activity"
-            android:textSize="30sp"
+            android:text=" Add Activity"
+            android:textSize="@dimen/md"
             android:textStyle="bold" />
 
         <EditText
@@ -35,11 +35,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
-            android:hint="@string/please_enter_activity_name"
-            android:inputType="@string/textName"
+            android:hint="Please enter activity name"
             android:scrollbars="vertical"
-            android:singleLine="true"
-            android:autofillHints="" />
+            android:singleLine="true" />
 
 
         <EditText
@@ -47,20 +45,19 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
-            android:hint="@string/please_enter_calories_burned"
+            android:hint="Please enter calories burned"
             android:inputType="number"
             android:scrollbars="vertical"
-            android:singleLine="true"
-            android:autofillHints="" />
+            android:singleLine="true" />
 
         <Button
             android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_margin="@dimen/md"
             android:onClick="submit"
             android:singleLine="true"
-            android:text="@string/submit" />
+            android:text="Submit" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,13 +71,14 @@
             android:layout_height="40dp"
             android:background="@color/black"
             android:gravity="center"
-            android:text="@string/activity_tracker"
+            android:text="Activity Tracker"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/sm"
             android:textStyle="bold" />
         <androidx.cardview.widget.CardView
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
@@ -91,9 +89,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:background="@drawable/circle"
-                android:contentDescription="@string/image_more"
-                android:onClick="addItems"
                 android:padding="15dp"
+                android:onClick="addItems"
                 android:scaleType="centerCrop"
                 android:src="@drawable/add_orange" />
         </androidx.cardview.widget.CardView>
@@ -103,25 +100,26 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/add_activity"
+            android:text="Add Activity"
             android:textColor="@color/themeColor"
-            android:textSize="18sp"
+            android:textSize="18dp"
             android:textStyle="bold" />
         <TextView
             android:layout_width="200dp"
-            android:textSize="27sp"
+            android:textSize="27dp"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_margin="10dp"
             android:layout_height="wrap_content"
-            android:text="@string/your_activities" />
+            android:text="Your Activities" />
 
         <ListView
             android:id="@android:id/list"
             android:layout_width="wrap_content"
-            android:layout_height="375dp"
-            android:drawSelectorOnTop="false" />
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false"
+            />
 
     </LinearLayout>
 
