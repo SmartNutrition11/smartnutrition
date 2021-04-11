@@ -11,12 +11,12 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/lg"
         android:background="@color/black"
         android:gravity="center"
         android:text="Nutrition Info"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="@dimen/sm"
         android:textStyle="bold" />
 
     <SearchView

@@ -46,23 +46,23 @@
         android:gravity="center"
         android:text="@string/btn_nutrition_text"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="@dimen/sm"
         android:textStyle="bold" />
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="@dimen/xlg"
+        android:layout_height="@dimen/xlg"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/xs"
+        android:layout_marginBottom="@dimen/xs"
         android:elevation="12dp"
         app:cardCornerRadius="40dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="90dp"
+            android:layout_height="@dimen/xlg"
             android:background="@color/themeColor"
             android:padding="15dp"
             android:scaleType="centerCrop"
@@ -72,29 +72,29 @@
 
     <TextView
         android:id="@+id/btn_calorie"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/xxlg"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:background="@color/themeColor"
         android:gravity="center"
         android:text="Activity Tracker"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="@dimen/sm"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="@dimen/xlg"
+        android:layout_height="@dimen/xlg"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="@dimen/sm"
+        android:layout_marginBottom="@dimen/xs"
         android:elevation="12dp"
         app:cardCornerRadius="40dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="90dp"
+            android:layout_height="@dimen/xlg"
             android:background="@color/themeColor"
             android:padding="25dp"
             android:scaleType="centerCrop"
@@ -103,14 +103,14 @@
 
     <TextView
         android:id="@+id/btn_health"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/xxlg"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:background="@color/themeColor"
         android:gravity="center"
         android:text="BMI Calculator"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="@dimen/sm"
         android:textStyle="bold" />
 
 
