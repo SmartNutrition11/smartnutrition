@@ -6,10 +6,18 @@ import edu.uc.mille5bm.smartnutrition.service.FoodService
 
 
 class MainViewModel {
-    var foods: MutableLiveData<ArrayList<Food>> = MutableLiveData<ArrayList<Food>>()
-    /***var foodService: foodService = foodService()
+    var _foods: MutableLiveData<ArrayList<Food>> = MutableLiveData<ArrayList<Food>>()
+    var foodService: FoodService = FoodService()
+
+    init{
+        fetchFoods("b")
+    }
 
     fun fetchFoods(foodName: String){
-        foods = foodService.fetchFoods(foodName)
-    }***/
+        _foods = foodService.fetchFoods(foodName)
+    }
+
+    internal var foods:MutableLiveData<ArrayList<Food>>
+        get() {return _foods}
+        set(value) {_foods = value}
 }
