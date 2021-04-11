@@ -11,16 +11,16 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
+        android:autofillHints=""
         android:background="@android:drawable/editbox_background_normal"
         android:hint="@string/search_hint"
-        android:padding="5dp"
 
-        />
+        android:inputType="@string/text_searchbox"
+        android:padding="5dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
@@ -32,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="90dp"
             android:background="@color/themeColor"
+            android:contentDescription="@string/image_fork"
             android:padding="15dp"
             android:scaleType="centerCrop"
             android:src="@drawable/spoon" />
@@ -46,24 +47,24 @@
         android:gravity="center"
         android:text="@string/btn_nutrition_text"
         android:textColor="@color/white"
-        android:textSize="@dimen/sm"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/xlg"
-        android:layout_height="@dimen/xlg"
-        android:layout_centerHorizontal="true"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/xs"
-        android:layout_marginBottom="@dimen/xs"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:elevation="12dp"
         app:cardCornerRadius="40dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/xlg"
+            android:layout_height="90dp"
             android:background="@color/themeColor"
+            android:contentDescription="@string/image_fire"
             android:padding="15dp"
             android:scaleType="centerCrop"
             android:src="@drawable/fire" />
@@ -71,31 +72,31 @@
 
 
     <TextView
-        android:id="@+id/btn_calorie"
-        android:layout_width="@dimen/xxlg"
+        android:id="@+id/btn_caloriepage"
+        android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:background="@color/themeColor"
         android:gravity="center"
-        android:text="Activity Tracker"
+        android:text="@string/activity_tracker"
         android:textColor="@color/white"
-        android:textSize="@dimen/sm"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/xlg"
-        android:layout_height="@dimen/xlg"
-        android:layout_centerHorizontal="true"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/sm"
-        android:layout_marginBottom="@dimen/xs"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:elevation="12dp"
         app:cardCornerRadius="40dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/xlg"
+            android:layout_height="90dp"
             android:background="@color/themeColor"
+            android:contentDescription="@string/image_more"
             android:padding="25dp"
             android:scaleType="centerCrop"
             android:src="@drawable/add" />
@@ -103,14 +104,14 @@
 
     <TextView
         android:id="@+id/btn_health"
-        android:layout_width="@dimen/xxlg"
+        android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:background="@color/themeColor"
         android:gravity="center"
-        android:text="BMI Calculator"
+        android:text="@string/bmi_calculator"
         android:textColor="@color/white"
-        android:textSize="@dimen/sm"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 
