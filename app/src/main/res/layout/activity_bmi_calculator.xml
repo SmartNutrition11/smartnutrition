@@ -14,7 +14,7 @@
         android:textSize="32sp"/>
 
     <ToggleButton
-        android:id="@+id/toggleunits"
+        android:id="@+id/activity_main_toggleunits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="true"
@@ -41,7 +41,7 @@
                 android:layout_gravity="center_vertical">
 
                 <TextView
-                    android:id="@+id/heightlabel"
+                    android:id="@+id/activity_main_heightlabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -49,7 +49,7 @@
                     android:textSize="24sp"/>
 
                 <EditText
-                    android:id="@+id/heightcm"
+                    android:id="@+id/activity_main_heightcm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="3"
@@ -66,7 +66,7 @@
                     android:gravity="center_horizontal">
 
                     <EditText
-                        android:id="@+id/heightfeet"
+                        android:id="@+id/activity_main_heightfeet"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="3"
@@ -76,7 +76,7 @@
                         android:autofillHints="" />
 
                     <EditText
-                        android:id="@+id/heightinches"
+                        android:id="@+id/activity_main_heightinches"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ems="3"
@@ -106,7 +106,7 @@
                 android:layout_gravity="center_vertical">
 
                 <TextView
-                    android:id="@+id/weightlabel"
+                    android:id="@+id/activity_main_weightlabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
@@ -114,7 +114,7 @@
                     android:textSize="24sp"/>
 
                 <EditText
-                    android:id="@+id/weightkgs"
+                    android:id="@+id/activity_main_weightkgs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="3"
@@ -125,7 +125,7 @@
                     android:autofillHints="" />
 
                 <EditText
-                    android:id="@+id/weightlbs"
+                    android:id="@+id/activity_main_weightlbs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="3"
@@ -140,7 +140,7 @@
 
     </LinearLayout>
     <Button
-        android:id="@+id/calculate"
+        android:id="@+id/activity_main_calculate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -155,7 +155,7 @@
         app:cardCornerRadius="6dp"
         app:cardMaxElevation="6dp"
         android:layout_margin="6dp"
-        android:id="@+id/resultcard">
+        android:id="@+id/activity_main_resultcard">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -176,11 +176,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center_horizontal"
-                android:id="@+id/bmi"
+                android:id="@+id/activity_main_bmi"
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/category"
+                android:id="@+id/activity_main_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
