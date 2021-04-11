@@ -1,12 +1,11 @@
-
 package edu.uc.mille5bm.smartnutrition
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.View
-import android.widget.*
-import androidx.cardview.widget.CardView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import edu.uc.mille5bm.smartnutrition.databinding.ActivityBmiCalculatorBinding
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY_HEALTHY
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY_OBESE
@@ -14,57 +13,44 @@ import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY
 import edu.uc.mille5bm.smartnutrition.ui.main.BMICalcUtil.Companion.BMI_CATEGORY_UNDERWEIGHT
 
 
-class BMIActivity: AppCompatActivity(){
-    lateinit var weightKgEditText: EditText
-    lateinit var heightCmEditText: EditText
-    lateinit var weightLbsEditText: EditText
-    lateinit var heightFtEditText: EditText
-    lateinit var heightInEditText: EditText
-    lateinit var calculateButton: Button
-    lateinit var bmiTextView: TextView
-    lateinit var categoryTextView: TextView
-    lateinit var toggleUnitsButton: ToggleButton
-    lateinit var bmiResultCardView: CardView
+class BMIActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityBmiCalculatorBinding
     var inMetricUnits = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bmi_calculator)
-        weightKgEditText = findViewById(R.id.activity_main_weightkgs)
-        heightCmEditText = findViewById(R.id.activity_main_heightcm)
-        weightLbsEditText = findViewById(R.id.activity_main_weightlbs)
-        heightFtEditText = findViewById(R.id.activity_main_heightfeet)
-        heightInEditText = findViewById(R.id.activity_main_heightinches)
-        calculateButton = findViewById(R.id.activity_main_calculate)
-        toggleUnitsButton = findViewById(R.id.activity_main_toggleunits)
-        bmiTextView = findViewById(R.id.activity_main_bmi)
-        categoryTextView = findViewById(R.id.activity_main_category)
-        bmiResultCardView = findViewById(R.id.activity_main_resultcard)
+        binding = ActivityBmiCalculatorBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         inMetricUnits = true
         updateInputsVisibility()
-        bmiResultCardView.setVisibility(View.GONE)
-        calculateButton.setOnClickListener(View.OnClickListener {
+        binding.resultcard.visibility = View.GONE
+        binding.calculate.setOnClickListener(View.OnClickListener {
             if (inMetricUnits) {
-                if (weightKgEditText.length() == 0 || heightCmEditText.length() == 0) {
-                    Toast.makeText(this@BMIActivity, "Populate Weight and Height to Calculate BMI", Toast.LENGTH_SHORT).show()
+                if (binding.weightkgs.length() == 0 || binding.heightcm.length() == 0) {
+                    showValidationMessage()
                 } else {
-                    val heightInCms = heightCmEditText.getText().toString().toDouble()
-                    val weightInKgs = weightKgEditText.getText().toString().toDouble()
-                    val bmi = BMICalcUtil().calculateBMIMetric(heightInCms, weightInKgs)
-                    displayBMI(bmi)
+                    displayBMI(
+                        BMICalcUtil().calculateBMIMetric(
+                            binding.heightcm.text.toString().toDouble(),
+                            binding.weightkgs.text.toString().toDouble()
+                        )
+                    )
                 }
             } else {
-                if (weightLbsEditText.length() == 0 || heightFtEditText.length() == 0 || heightInEditText.length() == 0) {
-                    Toast.makeText(this@BMIActivity, "Populate Weight and Height to Calculate BMI", Toast.LENGTH_SHORT).show()
+                if (binding.weightlbs.length() == 0 || binding.heightfeet.length() == 0 || binding.heightinches.length() == 0) {
+                    showValidationMessage()
                 } else {
-                    val heightFeet = heightFtEditText.getText().toString().toDouble()
-                    val heightInches = heightInEditText.getText().toString().toDouble()
-                    val weightLbs = weightLbsEditText.getText().toString().toDouble()
-                    val bmi = BMICalcUtil().calculateBMIImperial(heightFeet, heightInches, weightLbs)
-                    displayBMI(bmi)
+                    displayBMI(
+                        BMICalcUtil().calculateBMIImperial(
+                            binding.heightfeet.text.toString().toDouble(),
+                            binding.heightinches.text.toString().toDouble(),
+                            binding.weightlbs.text.toString().toDouble()
+                        )
+                    )
                 }
             }
         })
-        toggleUnitsButton.setOnClickListener(View.OnClickListener {
+        binding.toggleunits.setOnClickListener(View.OnClickListener {
             inMetricUnits = !inMetricUnits
             updateInputsVisibility()
         })
@@ -72,30 +58,38 @@ class BMIActivity: AppCompatActivity(){
 
     private fun updateInputsVisibility() {
         if (inMetricUnits) {
-            heightCmEditText.visibility = View.VISIBLE
-            weightKgEditText.visibility = View.VISIBLE
-            heightFtEditText.visibility = View.GONE
-            heightInEditText.visibility = View.GONE
-            weightLbsEditText.visibility = View.GONE
+            binding.heightcm.visibility = View.VISIBLE
+            binding.weightkgs.visibility = View.VISIBLE
+            binding.heightfeet.visibility = View.GONE
+            binding.heightinches.visibility = View.GONE
+            binding.weightlbs.visibility = View.GONE
         } else {
-            heightCmEditText.visibility = View.GONE
-            weightKgEditText.visibility = View.GONE
-            heightFtEditText.visibility = View.VISIBLE
-            heightInEditText.visibility = View.VISIBLE
-            weightLbsEditText.visibility = View.VISIBLE
+            binding.heightcm.visibility = View.GONE
+            binding.weightkgs.visibility = View.GONE
+            binding.heightfeet.visibility = View.VISIBLE
+            binding.heightinches.visibility = View.VISIBLE
+            binding.weightlbs.visibility = View.VISIBLE
         }
     }
 
+    private fun showValidationMessage() {
+        Toast.makeText(
+            this@BMIActivity,
+            "Populate Weight and Height to Calculate BMI",
+            Toast.LENGTH_SHORT
+        ).show()
+    }
+
     private fun displayBMI(bmi: Double) {
-        bmiResultCardView.visibility = View.VISIBLE
-        bmiTextView.text = String.format("%.2f", bmi)
-        val bmiCategory =   BMICalcUtil().classifyBMI(bmi)
-        categoryTextView.text = bmiCategory
+        binding.resultcard.visibility = View.VISIBLE
+        binding.bmi.text = String.format("%.2f", bmi)
+        val bmiCategory = BMICalcUtil().classifyBMI(bmi)
+        binding.category.text = bmiCategory
         when (bmiCategory) {
-            BMI_CATEGORY_UNDERWEIGHT -> bmiResultCardView.setCardBackgroundColor(Color.YELLOW)
-            BMI_CATEGORY_HEALTHY -> bmiResultCardView.setCardBackgroundColor(Color.BLACK)
-            BMI_CATEGORY_OVERWEIGHT -> bmiResultCardView.setCardBackgroundColor(Color.YELLOW)
-            BMI_CATEGORY_OBESE -> bmiResultCardView.setCardBackgroundColor(Color.RED)
+            BMI_CATEGORY_UNDERWEIGHT -> binding.resultcard.setCardBackgroundColor(Color.YELLOW)
+            BMI_CATEGORY_HEALTHY -> binding.resultcard.setCardBackgroundColor(Color.BLACK)
+            BMI_CATEGORY_OVERWEIGHT -> binding.resultcard.setCardBackgroundColor(Color.YELLOW)
+            BMI_CATEGORY_OBESE -> binding.resultcard.setCardBackgroundColor(Color.RED)
         }
     }
 }

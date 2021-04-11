@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:elevation="2dp"
         android:clickable="true"
-        android:padding="20dp"
+        android:padding="@dimen/sm"
         android:visibility="gone">
 
         <TextView
@@ -57,7 +57,7 @@
             android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_margin="@dimen/md"
             android:onClick="submit"
             android:singleLine="true"
             android:text="@string/submit" />

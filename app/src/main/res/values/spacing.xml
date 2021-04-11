@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <dimen name="xxs">5dp</dimen>
+    <dimen name="xs">10dp</dimen>
+    <dimen name="sm">20dp</dimen>
+    <dimen name="md">30dp</dimen>
+    <dimen name="lg">50dp</dimen>
+    <dimen name="xlg">90dp</dimen>
+    <dimen name="xxlg">300dp</dimen>
+</resources>
