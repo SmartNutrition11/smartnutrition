@@ -17,7 +17,6 @@ class FoodService {
             override fun onFailure(call: Call<ArrayList<Food>>, t: Throwable) {
                 val j = 1 + 1
                 val i = 1 + 1
-
             }
 
             override fun onResponse(
