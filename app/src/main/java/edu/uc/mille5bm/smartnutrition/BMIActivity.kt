@@ -24,7 +24,7 @@ class BMIActivity : AppCompatActivity() {
         inMetricUnits = true
         updateInputsVisibility()
         binding.resultcard.visibility = View.GONE
-        binding.calculate.setOnClickListener(View.OnClickListener {
+        binding.btnCalculate.setOnClickListener(View.OnClickListener {
             if (inMetricUnits) {
                 if (binding.weightkgs.length() == 0 || binding.heightcm.length() == 0) {
                     showValidationMessage()
