@@ -9,6 +9,10 @@ class FoodViewModel : ViewModel(){
     var foods: MutableLiveData<ArrayList<Food>> = MutableLiveData<ArrayList<Food>>()
     var foodService: FoodService = FoodService()
 
+    init {
+        fetchFoods()
+    }
+
     fun fetchFoods(){
         foods = foodService.fetchFoods()
     }

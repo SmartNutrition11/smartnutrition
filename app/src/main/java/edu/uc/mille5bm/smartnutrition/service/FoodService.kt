@@ -1,5 +1,6 @@
 package edu.uc.mille5bm.smartnutrition.service
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import edu.uc.mille5bm.smartnutrition.dao.IFoodDAO
 import edu.uc.mille5bm.smartnutrition.dto.Food
@@ -15,9 +16,7 @@ class FoodService {
         val call = service?.getAllFoods()
         call?.enqueue(object : Callback<ArrayList<Food>> {
             override fun onFailure(call: Call<ArrayList<Food>>, t: Throwable) {
-                val j = 1 + 1
-                val i = 1 + 1
-
+                Log.w("Failure of Food Call", t);
             }
 
             override fun onResponse(
@@ -28,6 +27,7 @@ class FoodService {
             }
 
         })
+        Log.d("Success?",_foods.toString());
         return _foods
     }
 }
