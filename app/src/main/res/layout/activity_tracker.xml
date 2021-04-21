@@ -7,9 +7,9 @@
     android:orientation="vertical"
     tools:context=".CalorieCounterActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/llAddActivity"
+    <LinearLayout
         android:layout_width="match_parent"
+        UI-CHANGE
         android:layout_height="match_parent"
         android:background="#FFFFFF"
         android:gravity="center_horizontal"
@@ -20,14 +20,14 @@
         android:visibility="gone">
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="50dp"
+            android:layout_height="40dp"
+            android:background="@color/black"
             android:gravity="center"
-            android:text=" Add Activity"
-            android:textSize="@dimen/md"
+            android:text="Activity Tracker"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <EditText
@@ -39,7 +39,6 @@
             android:scrollbars="vertical"
             android:singleLine="true" />
 
-
         <EditText
             android:id="@+id/etCal"
             android:layout_width="fill_parent"
@@ -50,31 +49,6 @@
             android:scrollbars="vertical"
             android:singleLine="true" />
 
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/md"
-            android:onClick="submit"
-            android:singleLine="true"
-            android:text="Submit" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/black"
-            android:gravity="center"
-            android:text="Activity Tracker"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sm"
-            android:textStyle="bold" />
         <androidx.cardview.widget.CardView
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -115,11 +89,9 @@
             android:text="Your Activities" />
 
         <ListView
-            android:id="@android:id/list"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawSelectorOnTop="false"
-            />
+            android:id="@+id/actListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

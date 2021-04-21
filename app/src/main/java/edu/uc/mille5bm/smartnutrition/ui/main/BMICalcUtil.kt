@@ -2,6 +2,17 @@
 package edu.uc.mille5bm.smartnutrition.ui.main
 
 class BMICalcUtil {
+
+    companion object {
+        val instance = BMICalcUtil()
+        private const val CENTIMETERS_IN_METER = 100
+        private const val INCHES_IN_FOOT = 12
+        private const val BMI_IMPERIAL_WEIGHT_SCALAR = 703
+        const val BMI_CATEGORY_UNDERWEIGHT = "Underweight"
+        const val BMI_CATEGORY_HEALTHY = "Healthy Weight Range"
+        const val BMI_CATEGORY_OVERWEIGHT = "Overweight"
+        const val BMI_CATEGORY_OBESE = "Obese"
+    }
     fun calculateBMIMetric(heightCm: Double, weightKg: Double): Double {
         return weightKg / (heightCm / CENTIMETERS_IN_METER * (heightCm / CENTIMETERS_IN_METER))
     }
@@ -22,14 +33,5 @@ class BMICalcUtil {
         }
     }
 
-    companion object {
-        val instance = BMICalcUtil()
-        private const val CENTIMETERS_IN_METER = 100
-        private const val INCHES_IN_FOOT = 12
-        private const val BMI_IMPERIAL_WEIGHT_SCALAR = 703
-        const val BMI_CATEGORY_UNDERWEIGHT = "Underweight"
-        const val BMI_CATEGORY_HEALTHY = "Healthy Weight Range"
-        const val BMI_CATEGORY_OVERWEIGHT = "Overweight"
-        const val BMI_CATEGORY_OBESE = "Obese"
-    }
+
 }
