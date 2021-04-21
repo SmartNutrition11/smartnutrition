@@ -11,9 +11,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnNutrition.setOnClickListener { startActivity(Intent(applicationContext, NutritionInfoActivity::class.java)) }
